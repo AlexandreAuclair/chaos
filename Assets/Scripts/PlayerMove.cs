@@ -41,7 +41,10 @@ public class PlayerMove : MonoBehaviour
 
         if(Input.GetAxis(Axis.VERTICAL_AXIS) > 0)
         {
-            Avancer();
+            Vector3 moveDirection = transform.forward;
+            moveDirection.y -= gravity * Time.deltaTime;
+
+            charController.Move(moveDirection * movement_Speed * Time.deltaTime);
 
         }
         else if(Input.GetAxis(Axis.VERTICAL_AXIS) < 0)
@@ -61,7 +64,7 @@ public class PlayerMove : MonoBehaviour
         moveDirection.y -= gravity * Time.deltaTime;
 
         charController.Move(moveDirection * movement_Speed * Time.deltaTime);
-        playerAnimations.Walk(true);
+
     }
     void Reculer()
     {
