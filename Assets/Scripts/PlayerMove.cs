@@ -72,7 +72,7 @@ public class PlayerMove : MonoBehaviour
         moveDirection.y -= gravity * Time.deltaTime;
 
         charController.Move(moveDirection * movement_Speed * Time.deltaTime);
-        playerAnimations.Walk(true);
+       
     }
 
    public void Rotate()
