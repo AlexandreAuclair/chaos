@@ -38,6 +38,15 @@ public class CharacterAnimations : MonoBehaviour
         anim.SetTrigger(AnimationTags.ATTACK_TRIGGER_3);
     }
 
+    public void Transition()
+    {
+        anim.SetTrigger(AnimationTags.ATTACK_TRANSITION);
+    }
+    public void Transition2()
+    {
+        anim.SetTrigger(AnimationTags.ATTACK_TRANSITION2);
+    }
+
 
     void FreezeAnimation()
     {

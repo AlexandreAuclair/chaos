@@ -12,13 +12,15 @@ public class PlayerAttackInput : MonoBehaviour
     private PlayerShield shield;
 
     private CharacterSoundFX soundFX;
-
+public bool a = false;
     void Awake()
     {
         playerAnimation = GetComponent<CharacterAnimations>();
         shield = GetComponent<PlayerShield>();
 
         soundFX = GetComponentInChildren<CharacterSoundFX>();
+
+        
     }
 
     // Update is called once per frame
@@ -47,7 +49,12 @@ public class PlayerAttackInput : MonoBehaviour
             //playerAnimation.Attack_2();
             //soundFX.Attack_2();
             //}
+            if (a == true)
+            {
+                Transition();
+            }
             AttackLight();
+            
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -73,11 +80,22 @@ public class PlayerAttackInput : MonoBehaviour
     {
         playerAnimation.Attack_1();
         soundFX.Attack_1();
+        a = true;
+    }
+    void AttackLight2()
+    {
+        playerAnimation.Attack_3();
+        soundFX.Attack_1();
     }
 
     void AttackHeavy()
     {
         playerAnimation.Attack_2();
+        soundFX.Attack_2();
+    }
+    void Transition()
+    {
+        playerAnimation.Transition();
         soundFX.Attack_2();
     }
 

@@ -18,7 +18,9 @@ public class AnimationTags
 {
     public const string WALK_PARAMETER = "Walk";
     public const string DEFEND_PARAMETER = "Defend";
-    public const string ATTACK_TRIGGER_1 = "attack1";
+    public const string ATTACK_TRIGGER_1 = "Attack1";
     public const string ATTACK_TRIGGER_2 = "Attack2";
     public const string ATTACK_TRIGGER_3 = "Attack3";
+    public const string ATTACK_TRANSITION = "Transition";
+    public const string ATTACK_TRANSITION2 = "Transition";
 }
