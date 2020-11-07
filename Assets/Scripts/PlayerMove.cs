@@ -84,11 +84,20 @@ public class PlayerMove : MonoBehaviour
         {
             TournerGauche();
         }
+        else
+        {
+            playerAnimations.TurnLeft(false);
+        }
         
         if (Input.GetAxis(Axis.HORIZONTAL_AXIS) > 0)
         {
             TournerDroite();
         }
+        else
+        {
+            playerAnimations.TurnRight(false);
+        }
+
         if(rotation_Direction != Vector3.zero)
         {
             transform.rotation = Quaternion.RotateTowards(
@@ -109,6 +118,7 @@ public class PlayerMove : MonoBehaviour
                 transform.rotation, Quaternion.LookRotation(rotation_Direction),
                 rotateDegreesPerSecond * Time.deltaTime);
         }
+        playerAnimations.TurnLeft(true);
     }
     void TournerDroite()
     {
@@ -120,6 +130,7 @@ public class PlayerMove : MonoBehaviour
                 transform.rotation, Quaternion.LookRotation(rotation_Direction),
                 rotateDegreesPerSecond * Time.deltaTime);
         }
+        playerAnimations.TurnRight(true);
     }
 
     void AnimateWalk()
@@ -133,5 +144,6 @@ public class PlayerMove : MonoBehaviour
             playerAnimations.Walk(false);
         }
     }
+
 
 }//class

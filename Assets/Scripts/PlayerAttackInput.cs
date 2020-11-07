@@ -12,7 +12,7 @@ public class PlayerAttackInput : MonoBehaviour
     private PlayerShield shield;
 
     private CharacterSoundFX soundFX;
-public bool a = false;
+private bool a = false;
     void Awake()
     {
         playerAnimation = GetComponent<CharacterAnimations>();
@@ -52,6 +52,7 @@ public bool a = false;
             if (a == true)
             {
                 Transition();
+                a = false;
             }
             AttackLight();
             

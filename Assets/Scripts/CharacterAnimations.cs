@@ -22,6 +22,14 @@ public class CharacterAnimations : MonoBehaviour
     {
         anim.SetBool(AnimationTags.DEFEND_PARAMETER, defend);
     }
+    public void TurnRight(bool tournerDroite)
+    {
+        anim.SetBool(AnimationTags.TURN_RIGHT, tournerDroite);
+    }
+    public void TurnLeft(bool tournerGauche)
+    {
+        anim.SetBool(AnimationTags.TURN_LEFT, tournerGauche);
+    }
 
     public void Attack_1()
     {

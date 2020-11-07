@@ -23,4 +23,6 @@ public class AnimationTags
     public const string ATTACK_TRIGGER_3 = "Attack3";
     public const string ATTACK_TRANSITION = "Transition";
     public const string ATTACK_TRANSITION2 = "Transition";
+    public const string TURN_RIGHT = "TurnRight";
+    public const string TURN_LEFT = "TurnLeft";
 }
