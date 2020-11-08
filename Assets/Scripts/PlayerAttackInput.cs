@@ -91,7 +91,7 @@ private bool a = false;
 
     void AttackHeavy()
     {
-        playerAnimation.Attack_2();
+        playerAnimation.Attack_4();
         soundFX.Attack_2();
     }
     void Transition()

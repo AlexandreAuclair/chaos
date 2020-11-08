@@ -45,6 +45,11 @@ public class CharacterAnimations : MonoBehaviour
     {
         anim.SetTrigger(AnimationTags.ATTACK_TRIGGER_3);
     }
+    
+    public void Attack_4()
+    {
+        anim.SetTrigger(AnimationTags.ATTACK_TRIGGER_4);
+    }
 
     public void Transition()
     {
@@ -53,6 +58,10 @@ public class CharacterAnimations : MonoBehaviour
     public void Transition2()
     {
         anim.SetTrigger(AnimationTags.ATTACK_TRANSITION2);
+    }
+    public void Damage()
+    {
+        anim.SetTrigger(AnimationTags.DAMAGE);
     }
 
 

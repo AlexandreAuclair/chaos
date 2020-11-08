@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class HealthScript : MonoBehaviour
 {
-
+    private CharacterAnimations playerAnimation;
     public float health = 100f;
 
     private float x_Death = -90f;
@@ -29,6 +29,7 @@ public class HealthScript : MonoBehaviour
     void Awake()
     {
         soundFX = GetComponentInChildren<CharacterSoundFX>();
+        playerAnimation = GetComponent<CharacterAnimations>();
     }
 
     void Update()
@@ -48,6 +49,7 @@ public class HealthScript : MonoBehaviour
         }
 
         health -= damage;
+        playerAnimation.Damage();
 
         if(health_UI != null)
         {
