@@ -74,8 +74,8 @@ public class HealthScript : MonoBehaviour
                 //for the camera anymore
                 Camera.main.transform.SetParent(null);
 
-                GameObject.FindGameObjectWithTag(Tags.ENEMY_TAG)
-                    .GetComponent<EnemyController>().enabled = false;
+               // GameObject.FindGameObjectWithTag(Tags.ENEMY_TAG)
+                   // .GetComponent<EnemyController>().enabled = false;
             }
             else
             {
