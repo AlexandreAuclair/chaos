@@ -45,11 +45,15 @@ public class HealthScript : MonoBehaviour
     {
         if (shieldActivated)
         {
-            return;
+            health -= 1;
         }
-
+        else
+        {
         health -= damage;
         playerAnimation.Damage();
+        }
+
+        
 
         if(health_UI != null)
         {
