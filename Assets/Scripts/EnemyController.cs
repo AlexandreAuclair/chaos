@@ -93,12 +93,12 @@ public class EnemyController : MonoBehaviour
             if (UnityEngine.Random.Range(0, 2) > 0)
             {
                 enemy_Anim.Attack_1();
-                soundFX.Attack_1();
+                soundFX.Attack();
             }
             else
             {
                 enemy_Anim.Attack_2();
-                soundFX.Attack_2();
+                soundFX.Attack();
             }
 
             attack_Timer = 0f;

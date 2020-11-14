@@ -81,24 +81,24 @@ private bool a = false;
     void AttackLight()
     {
         playerAnimation.Attack_1();
-        soundFX.Attack_1();
+        soundFX.Attack();
         a = true;
     }
     void AttackLight2()
     {
         playerAnimation.Attack_3();
-        soundFX.Attack_1();
+        soundFX.Attack();
     }
 
     void AttackHeavy()
     {
         playerAnimation.Attack_4();
-        soundFX.Attack_2();
+        soundFX.Attack();
     }
     void Transition()
     {
         playerAnimation.Transition();
-        soundFX.Attack_2();
+        soundFX.Attack();
     }
 
     void Activate_AttackPoint()
