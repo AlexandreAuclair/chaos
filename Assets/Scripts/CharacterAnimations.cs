@@ -31,6 +31,21 @@ public class CharacterAnimations : MonoBehaviour
         anim.SetBool(AnimationTags.TURN_LEFT, tournerGauche);
     }
 
+    public void WalkBatard()
+    {
+        anim.SetTrigger(AnimationTags.WALK_TRIGGER_1);
+    }
+
+    public void WalkDont()
+    {
+        anim.SetTrigger(AnimationTags.WALK_TRIGGER_2);
+    }
+
+    public void TurnBatard()
+    {
+        anim.SetTrigger(AnimationTags.WALK_TRIGGER_3);
+    }
+
     public void Attack_1()
     {
         anim.SetTrigger(AnimationTags.ATTACK_TRIGGER_1);

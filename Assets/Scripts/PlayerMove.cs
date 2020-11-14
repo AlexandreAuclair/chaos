@@ -64,7 +64,7 @@ public class PlayerMove : MonoBehaviour
         moveDirection.y -= gravity * Time.deltaTime;
 
         charController.Move(moveDirection * movement_Speed * Time.deltaTime);
-
+        playerAnimations.WalkBatard();
     }
     void Reculer()
     {
@@ -72,7 +72,7 @@ public class PlayerMove : MonoBehaviour
         moveDirection.y -= gravity * Time.deltaTime;
 
         charController.Move(moveDirection * movement_Speed * Time.deltaTime);
-       
+        playerAnimations.WalkBatard();
     }
 
    public void Rotate()
@@ -112,6 +112,7 @@ public class PlayerMove : MonoBehaviour
     {
         Vector3 rotation_Direction = Vector3.zero;
         rotation_Direction = transform.TransformDirection(Vector3.left);
+        playerAnimations.TurnBatard();
         if (rotation_Direction != Vector3.zero)
         {
             transform.rotation = Quaternion.RotateTowards(
@@ -124,6 +125,7 @@ public class PlayerMove : MonoBehaviour
     {
         Vector3 rotation_Direction = Vector3.zero;
         rotation_Direction = transform.TransformDirection(Vector3.right);
+        playerAnimations.WalkDont();
         if (rotation_Direction != Vector3.zero)
         {
             transform.rotation = Quaternion.RotateTowards(

@@ -5,6 +5,8 @@ using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class HealthScript : MonoBehaviour
 {
@@ -17,6 +19,7 @@ public class HealthScript : MonoBehaviour
     private bool playerDied;
 
     public bool isPlayer;
+    public GameObject text;
 
     [SerializeField]
     private Image health_UI;
@@ -30,6 +33,7 @@ public class HealthScript : MonoBehaviour
     {
         soundFX = GetComponentInChildren<CharacterSoundFX>();
         playerAnimation = GetComponent<CharacterAnimations>();
+        
     }
 
     void Update()
@@ -37,6 +41,9 @@ public class HealthScript : MonoBehaviour
         if (playerDied)
         {
             RotateAfterDeath();
+            text.SetActive(true);
+            StartCoroutine(GameOver());
+            
         }
     }
 
@@ -83,6 +90,7 @@ public class HealthScript : MonoBehaviour
             }
             else
             {
+                
                 GetComponent<EnemyController>().enabled = false;
                 GetComponent<NavMeshAgent>().enabled = false;
             }
@@ -95,6 +103,12 @@ public class HealthScript : MonoBehaviour
         transform.eulerAngles = new Vector3(
             Mathf.Lerp(transform.eulerAngles.x, x_Death, Time.deltaTime * death_Smouth),
             transform.eulerAngles.y, transform.eulerAngles.z);
+    }
+
+    public IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(7f);
+        SceneManager.LoadScene(0);
     }
 
     IEnumerator AllowRotate()

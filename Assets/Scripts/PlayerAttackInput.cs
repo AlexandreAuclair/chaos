@@ -11,6 +11,8 @@ public class PlayerAttackInput : MonoBehaviour
 
     private PlayerShield shield;
 
+    
+
     private CharacterSoundFX soundFX;
 private bool a = false;
     void Awake()
@@ -19,7 +21,6 @@ private bool a = false;
         shield = GetComponent<PlayerShield>();
 
         soundFX = GetComponentInChildren<CharacterSoundFX>();
-
         
     }
 
