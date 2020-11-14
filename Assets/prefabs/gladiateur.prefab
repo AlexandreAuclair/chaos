@@ -2011,9 +2011,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee06db3bbbe0734fbb2333d375d67e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack_Sound_1: {fileID: 8300000, guid: 81e458a91c51d5041bf47c8b78ed37aa, type: 3}
-  attack_Sound_2: {fileID: 8300000, guid: 7ecee9a1b3091ca42ba960f5469551b4, type: 3}
-  die_Sound: {fileID: 8300000, guid: 88443ba27b27a2a4cadc82caf0b7ce11, type: 3}
+  attack_Sound_1: {fileID: 8300000, guid: 536f4101f9c34504e9580903d283b016, type: 3}
+  attack_Sound_2: {fileID: 8300000, guid: 81e458a91c51d5041bf47c8b78ed37aa, type: 3}
+  attack_Sound_3: {fileID: 8300000, guid: 7ecee9a1b3091ca42ba960f5469551b4, type: 3}
+  hurt_Sound_1: {fileID: 8300000, guid: 7b06c28c2bd8ac4468463a617fd0b9fa, type: 3}
+  hurt_Sound_2: {fileID: 8300000, guid: 6798a542328f1564fae3c17490c86453, type: 3}
+  hurt_Sound_3: {fileID: 8300000, guid: 6798a542328f1564fae3c17490c86453, type: 3}
+  block_Sound_1: {fileID: 8300000, guid: 6ce9337234d9aeb4bb6aa5996d9172d3, type: 3}
+  block_Sound_2: {fileID: 8300000, guid: 3cf4a26f37228744bae3882e27cb4d3f, type: 3}
+  block_Sound_3: {fileID: 8300000, guid: 52e7ea4e783e8344da521625ec80439f, type: 3}
+  die_Sound_1: {fileID: 8300000, guid: db64ce470a72cc647b5cc8b00315b2a5, type: 3}
+  die_Sound_2: {fileID: 8300000, guid: 5fa5dcc724019cf429d765be8bcba63c, type: 3}
+  die_Sound_3: {fileID: 8300000, guid: 88443ba27b27a2a4cadc82caf0b7ce11, type: 3}
+  fanfare_fin: {fileID: 8300000, guid: 0618fdabb3baee241bab4f72cf9aee18, type: 3}
 --- !u!1 &1896575116596217660
 GameObject:
   m_ObjectHideFlags: 0
@@ -6928,6 +6938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   isPlayer: 1
+  text: {fileID: 0}
   health_UI: {fileID: 0}
   shieldActivated: 0
 --- !u!1 &7948571389211308050

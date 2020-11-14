@@ -28,12 +28,14 @@ public class HealthScript : MonoBehaviour
     public bool shieldActivated;
 
     private CharacterSoundFX soundFX;
+    public GameObject fanfareFin;
+    public GameObject crowdFin;
+    public float comboSoundCounter = 0;
 
     void Awake()
     {
         soundFX = GetComponentInChildren<CharacterSoundFX>();
         playerAnimation = GetComponent<CharacterAnimations>();
-        
     }
 
     void Update()
@@ -48,20 +50,35 @@ public class HealthScript : MonoBehaviour
     }
 
 
+    public IEnumerator ComboNoiseFunction() 
+        {
+            comboSoundCounter = 0;
+            crowdFin.SetActive(true);
+            yield return new WaitForSeconds(6f);
+            crowdFin.SetActive(false);
+        }
+
     public void ApplyDamage(float damage)
     {
         if (shieldActivated)
         {
+            comboSoundCounter = 0;
             health -= 1;
+            soundFX.Block();
         }
         else
         {
-        health -= damage;
-        playerAnimation.Damage();
+            comboSoundCounter++; 
+            health -= damage;
+            playerAnimation.Damage();
+            soundFX.Hurt();
+            if (comboSoundCounter >= 3)
+            {
+                StartCoroutine(ComboNoiseFunction());
+            }
         }
 
-        
-
+      
         if(health_UI != null)
         {
             health_UI.fillAmount = health / 100f;
@@ -107,16 +124,16 @@ public class HealthScript : MonoBehaviour
 
     public IEnumerator GameOver()
     {
-        yield return new WaitForSeconds(7f);
+        fanfareFin.SetActive(true);
+        crowdFin.SetActive(true);
+        yield return new WaitForSeconds(9f);
         SceneManager.LoadScene(0);
     }
 
     IEnumerator AllowRotate()
     {
         playerDied = true;
-
         yield return new WaitForSeconds(rotate_Time);
-
         playerDied = false;
     }
 

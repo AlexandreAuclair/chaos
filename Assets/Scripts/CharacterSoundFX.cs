@@ -20,7 +20,8 @@ public class CharacterSoundFX : MonoBehaviour
         block_Sound_3,
         die_Sound_1,
         die_Sound_2,
-        die_Sound_3;   
+        die_Sound_3,
+        fanfare_fin;
     void Awake()
     {
         soundFX = GetComponent<AudioSource>();
@@ -111,4 +112,6 @@ public class CharacterSoundFX : MonoBehaviour
                 break;
         }
     }
+
+   
 }//class
