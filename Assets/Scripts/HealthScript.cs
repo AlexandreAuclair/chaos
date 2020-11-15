@@ -31,11 +31,13 @@ public class HealthScript : MonoBehaviour
     public GameObject fanfareFin;
     public GameObject crowdFin;
     public float comboSoundCounter = 0;
+   
 
     void Awake()
     {
         soundFX = GetComponentInChildren<CharacterSoundFX>();
         playerAnimation = GetComponent<CharacterAnimations>();
+        
     }
 
     void Update()
@@ -85,7 +87,8 @@ public class HealthScript : MonoBehaviour
         }
 
    if (health <= 0){
-
+            Scene currentScene = SceneManager.GetActiveScene();
+            string sceneName = currentScene.name;
             soundFX.Die();
 
             GetComponent<Animator>().enabled = false;
@@ -102,8 +105,12 @@ public class HealthScript : MonoBehaviour
                 //for the camera anymore
                 Camera.main.transform.SetParent(null);
 
-               // GameObject.FindGameObjectWithTag(Tags.ENEMY_TAG)
-                   // .GetComponent<EnemyController>().enabled = false;
+                if(sceneName == "gameplay")
+                {
+                    GameObject.FindGameObjectWithTag(Tags.ENEMY_TAG)
+                     .GetComponent<EnemyController>().enabled = false;
+                }
+               
             }
             else
             {
