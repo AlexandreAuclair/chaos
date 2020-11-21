@@ -354,9 +354,9 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
+    m_Bias: 0.081
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 0.16
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -392,7 +392,7 @@ Light:
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
-  m_ShadowAngle: 0
+  m_ShadowAngle: 4.3
 --- !u!4 &705507995
 Transform:
   m_ObjectHideFlags: 0
@@ -400,13 +400,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.7007134, y: 0.16516349, z: -0.15709385, w: 0.6760497}
-  m_LocalPosition: {x: -9, y: 41.9, z: 18.4}
+  m_LocalRotation: {x: 0.630672, y: 0.44971696, z: -0.500488, w: 0.38667735}
+  m_LocalPosition: {x: 9.2, y: 42.6, z: 1.3}
   m_LocalScale: {x: 4.0173903, y: 2.5053, z: 26.322296}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -267.897, y: -4.942993, z: -391.29102}
+  m_LocalEulerAnglesHint: {x: -249.7, y: 54.8, z: -391.29102}
 --- !u!114 &806538102 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5340977748604101973, guid: 7f950dea9cf3d9646938e35ad3638f25,
@@ -476,7 +476,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 48.5
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -501,13 +501,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.38544792, y: -0.5678648, z: 0.4170905, w: 0.5958146}
-  m_LocalPosition: {x: 4.8, y: 20.1, z: -2}
+  m_LocalRotation: {x: 0.34472138, y: -0.6262278, z: 0.3314157, w: 0.61576754}
+  m_LocalPosition: {x: 8.1, y: 17, z: 0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 68.909004, y: -80.73801, z: 9.478001}
+  m_LocalEulerAnglesHint: {x: 57.1, y: -92.32, z: -2.49}
 --- !u!114 &1005974567 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5340977748711512580, guid: 7f950dea9cf3d9646938e35ad3638f25,
