@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    int zoom = 10;
+    int zoom = 7;
     int zmoo = 20;
     int zom = 30;
     int normal = 48;
@@ -39,6 +39,7 @@ public class CameraFollow : MonoBehaviour
             if (dist <= 1)
             {
                 mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, zoom, Time.deltaTime * smooth);
+               
             }
             if (dist <= 4)
             {
