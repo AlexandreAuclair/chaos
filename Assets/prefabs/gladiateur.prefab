@@ -2023,7 +2023,6 @@ MonoBehaviour:
   die_Sound_1: {fileID: 8300000, guid: db64ce470a72cc647b5cc8b00315b2a5, type: 3}
   die_Sound_2: {fileID: 8300000, guid: 5fa5dcc724019cf429d765be8bcba63c, type: 3}
   die_Sound_3: {fileID: 8300000, guid: 88443ba27b27a2a4cadc82caf0b7ce11, type: 3}
-  fanfare_fin: {fileID: 8300000, guid: 0618fdabb3baee241bab4f72cf9aee18, type: 3}
 --- !u!1 &1896575116596217660
 GameObject:
   m_ObjectHideFlags: 0
@@ -6779,6 +6778,7 @@ GameObject:
   - component: {fileID: 1203831124028257372}
   - component: {fileID: 4554532625848197541}
   - component: {fileID: 3604979257811617485}
+  - component: {fileID: 956046981}
   m_Layer: 9
   m_Name: gladiateur
   m_TagString: Player
@@ -6941,6 +6941,24 @@ MonoBehaviour:
   text: {fileID: 0}
   health_UI: {fileID: 0}
   shieldActivated: 0
+  fanfareFin: {fileID: 0}
+  crowdFin: {fileID: 0}
+  comboSoundCounter: 0
+--- !u!114 &956046981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7946292932737923709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25026b2f713baf4b83eed91d0adc6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  other: {fileID: 0}
+  mainCamera: {fileID: 0}
+  offsetPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &7948571389211308050
 GameObject:
   m_ObjectHideFlags: 0
