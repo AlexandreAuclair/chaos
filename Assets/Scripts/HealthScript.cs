@@ -22,7 +22,7 @@ public class HealthScript : MonoBehaviour
     public GameObject text;
 
     [SerializeField]
-    private Image health_UI;
+    public Image health_UI;
 
     [HideInInspector]
     public bool shieldActivated;
