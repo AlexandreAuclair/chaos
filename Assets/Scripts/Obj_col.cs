@@ -14,7 +14,7 @@ public class Obj_col : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "gladiateur")
+        if(collision.gameObject.name == "gladiateur" || collision.gameObject.name == "gladiateur2")
         {
             healthScript.health += 30f;
             Destroy(gameObject);
