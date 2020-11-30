@@ -35,7 +35,6 @@ public class CameraFollow : MonoBehaviour
         if (other)
         {
             float dist = Vector3.Distance(other.position, transform.position);
-            print("Distance to other: " + dist);
             if (dist <= 1)
             {
                 mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, zoom, Time.deltaTime * smooth);
