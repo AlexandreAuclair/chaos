@@ -17,6 +17,7 @@ public class Obj_col : MonoBehaviour
         thePlayer2 = GameObject.Find("gladiateur2");
         healthScript2 = thePlayer2.GetComponent<HealthScript>();
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.name == "gladiateur")

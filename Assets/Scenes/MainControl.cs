@@ -11,7 +11,7 @@ public class MainControl : MonoBehaviour
     }
     public void ButtonTwo()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     public void ButtonQuit()
