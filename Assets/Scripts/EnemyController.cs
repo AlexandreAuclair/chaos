@@ -21,7 +21,7 @@ public class EnemyController : MonoBehaviour
     public float move_Speed = 3.5f;
     public float attack_Distance = 1f;
     public float chase_Player_After_Attack_Distance = 1f;
-    private float wait_Before_Attack_Time = 1.5f;
+    private float wait_Before_Attack_Time = 2f;
     private float attack_Timer;
 
     private EnemyState enemy_State;

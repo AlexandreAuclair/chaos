@@ -23,7 +23,6 @@ public class TimerScript : MonoBehaviour
         {
             time = 0;
             time.ToString("Go");
-            SceneManager.LoadScene(2);
         }
     }
 }
