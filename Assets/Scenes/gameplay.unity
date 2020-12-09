@@ -1309,6 +1309,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2114917776, guid: e8353b6290cf0e5439bcaa2de7dabc06, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5299413194365062682, guid: e8353b6290cf0e5439bcaa2de7dabc06,
         type: 3}
       propertyPath: m_IsActive
@@ -1726,6 +1730,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6152178843581151574, guid: 9d61aadb97f67ab4fb47db9751888dc6,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152178843655906349, guid: 9d61aadb97f67ab4fb47db9751888dc6,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152178843845655873, guid: 9d61aadb97f67ab4fb47db9751888dc6,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152178844299140493, guid: 9d61aadb97f67ab4fb47db9751888dc6,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6152178844502180199, guid: 9d61aadb97f67ab4fb47db9751888dc6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1886,6 +1910,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: gladiateur
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007037399196635481, guid: ec520af02a8537941b8d4ec4623a00eb,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec520af02a8537941b8d4ec4623a00eb, type: 3}
