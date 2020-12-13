@@ -28,17 +28,17 @@ private bool a = false;
     void Update()
     {
         //defend when J pressed
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             defend();
         }
 
-        if (Input.GetKeyUp(KeyCode.J))
+        if (Input.GetKeyUp(KeyCode.Z))
         {
             defendNo();
         }
 
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             //if(Random.Range(0, 2) > 0)
             //{
@@ -58,7 +58,7 @@ private bool a = false;
             AttackLight();
             
         }
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             AttackHeavy();
         }
