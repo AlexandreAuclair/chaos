@@ -11,7 +11,7 @@ public class PlayerAttackInput : MonoBehaviour
 
     private PlayerShield shield;
 
-    
+    private HealthScript healthScript;
 
     private CharacterSoundFX soundFX;
 private bool a = false;
@@ -19,7 +19,7 @@ private bool a = false;
     {
         playerAnimation = GetComponent<CharacterAnimations>();
         shield = GetComponent<PlayerShield>();
-
+        healthScript = GetComponent<HealthScript>();
         soundFX = GetComponentInChildren<CharacterSoundFX>();
         
     }
@@ -80,20 +80,33 @@ private bool a = false;
     }
     void AttackLight()
     {
-        playerAnimation.Attack_1();
-        soundFX.Attack();
-        a = true;
+        if(healthScript.shieldActivated == false)
+        {
+            if (playerAnimation.anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+            {
+                soundFX.Attack();
+            }
+
+            playerAnimation.Attack_1(); 
+            a = true;
+        }     
     }
     void AttackLight2()
     {
-        playerAnimation.Attack_3();
-        soundFX.Attack();
+        if (healthScript.shieldActivated == false)
+        {
+            playerAnimation.Attack_3();
+            soundFX.Attack();
+        }   
     }
 
     void AttackHeavy()
     {
-        playerAnimation.Attack_4();
-        soundFX.Attack();
+        if (healthScript.shieldActivated == false)
+        {
+            playerAnimation.Attack_4();
+              soundFX.Attack();
+        }   
     }
     void Transition()
     {

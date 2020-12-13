@@ -21,6 +21,7 @@ public class CharacterSoundFX : MonoBehaviour
         die_Sound_1,
         die_Sound_2,
         die_Sound_3;
+
     void Awake()
     {
         soundFX = GetComponent<AudioSource>();

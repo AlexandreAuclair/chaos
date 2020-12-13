@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CharacterAnimations : MonoBehaviour
 {
-
-    private Animator anim;
+    [HideInInspector]
+    public Animator anim;
 
     // Start is called before the first frame update
     void Awake()
