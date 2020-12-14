@@ -26,8 +26,9 @@ public class AnimationTags
     public const string ATTACK_TRANSITION2 = "Transition2";
     public const string TURN_RIGHT = "TurnRight";
     public const string TURN_LEFT = "TurnLeft";
-    public const string DAMAGE = "Damage";
+    public const string DAMAGE = "DefendEnemy";
     public const string WALK_TRIGGER_1 = "WalkBatard";
     public const string WALK_TRIGGER_2 = "WalkDont";
     public const string WALK_TRIGGER_3 = "TurnBatard";
+    public const string WALK_TRIGGER_4 = "WalkDroit";
 }

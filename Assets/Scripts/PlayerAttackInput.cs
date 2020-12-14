@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerAttackInput : MonoBehaviour
 {
-
     private CharacterAnimations playerAnimation;
-
+    public GameObject enemyAnimation;
+    
+    
     public GameObject attackPoint;
 
     private PlayerShield shield;
@@ -18,6 +19,7 @@ private bool a = false;
     void Awake()
     {
         playerAnimation = GetComponent<CharacterAnimations>();
+       
         shield = GetComponent<PlayerShield>();
         healthScript = GetComponent<HealthScript>();
         soundFX = GetComponentInChildren<CharacterSoundFX>();
@@ -27,6 +29,7 @@ private bool a = false;
     // Update is called once per frame
     void Update()
     {
+
         //defend when J pressed
         if (Input.GetKeyDown(KeyCode.Z))
         {
@@ -58,6 +61,7 @@ private bool a = false;
             AttackLight();
             
         }
+        
         if (Input.GetKeyDown(KeyCode.X))
         {
             AttackHeavy();
@@ -66,9 +70,20 @@ private bool a = false;
 
     void defend()
     {
+        CharacterAnimations component = enemyAnimation.GetComponent<CharacterAnimations>();
         playerAnimation.Defend(true);
-
+        
         shield.ActivateShield(true);
+
+        component.Damage(true);
+        StartCoroutine(desactive());
+        
+    }
+    public IEnumerator desactive()
+    {
+        CharacterAnimations component = enemyAnimation.GetComponent<CharacterAnimations>();
+        yield return new WaitForSeconds(1f);
+        component.Damage(false);
     }
 
     void defendNo()

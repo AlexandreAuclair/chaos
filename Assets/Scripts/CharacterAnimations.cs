@@ -35,6 +35,10 @@ public class CharacterAnimations : MonoBehaviour
     {
         anim.SetTrigger(AnimationTags.WALK_TRIGGER_1);
     }
+    public void WalkDroit()
+    {
+        anim.SetTrigger(AnimationTags.WALK_TRIGGER_4);
+    }
 
     public void WalkDont()
     {
@@ -74,9 +78,9 @@ public class CharacterAnimations : MonoBehaviour
     {
         anim.SetTrigger(AnimationTags.ATTACK_TRANSITION2);
     }
-    public void Damage()
+    public void Damage(bool DefendEnemy)
     {
-        anim.SetTrigger(AnimationTags.DAMAGE);
+        anim.SetBool(AnimationTags.DAMAGE, DefendEnemy);
     }
 
 

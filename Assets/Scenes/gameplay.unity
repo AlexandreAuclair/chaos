@@ -543,6 +543,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ea74bfbd7a45654492bed2c749ca501, type: 3}
+--- !u!1 &632655621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7160202340976812219, guid: e8353b6290cf0e5439bcaa2de7dabc06,
+    type: 3}
+  m_PrefabInstance: {fileID: 3314140867757681033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,6 +879,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83e51e77710a83c4986762907275bf10, type: 3}
+--- !u!1 &1231014810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5299413194365062682, guid: e8353b6290cf0e5439bcaa2de7dabc06,
+    type: 3}
+  m_PrefabInstance: {fileID: 3314140867757681033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1327353025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1831,6 +1843,16 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 115233810746420429, guid: ec520af02a8537941b8d4ec4623a00eb,
+        type: 3}
+      propertyPath: enemyAnimation
+      value: 
+      objectReference: {fileID: 632655621}
+    - target: {fileID: 115233810746420429, guid: ec520af02a8537941b8d4ec4623a00eb,
+        type: 3}
+      propertyPath: enemyAttackPoint
+      value: 
+      objectReference: {fileID: 1231014810}
     - target: {fileID: 3604979257811617485, guid: ec520af02a8537941b8d4ec4623a00eb,
         type: 3}
       propertyPath: text

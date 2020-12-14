@@ -90,14 +90,24 @@ public class EnemyController : MonoBehaviour
 
         if(attack_Timer > wait_Before_Attack_Time)
         {
-            if (UnityEngine.Random.Range(0, 2) > 0)
+            if (UnityEngine.Random.Range(0, 4) > 0)
             {
                 enemy_Anim.Attack_1();
                 soundFX.Attack();
             }
-            else
+            else if (UnityEngine.Random.Range(0, 4) > 1)
             {
                 enemy_Anim.Attack_2();
+                soundFX.Attack();
+            }
+            else if (UnityEngine.Random.Range(0, 4) > 2)
+            {
+                enemy_Anim.Attack_3();
+                soundFX.Attack();
+            }
+            else
+            {
+                enemy_Anim.Attack_4();
                 soundFX.Attack();
             }
 

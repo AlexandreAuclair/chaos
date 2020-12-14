@@ -72,7 +72,6 @@ public class HealthScript : MonoBehaviour
         {
             comboSoundCounter++; 
             health -= damage;
-            playerAnimation.Damage();
             soundFX.Hurt();
             if (comboSoundCounter >= 3)
             {

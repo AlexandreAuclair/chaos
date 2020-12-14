@@ -382,6 +382,11 @@ PrefabInstance:
       propertyPath: nameLabel
       value: 
       objectReference: {fileID: 152204358}
+    - target: {fileID: 115233810746420429, guid: ec520af02a8537941b8d4ec4623a00eb,
+        type: 3}
+      propertyPath: enemyAnimation
+      value: 
+      objectReference: {fileID: 456329174}
     - target: {fileID: 3171397117923776087, guid: ec520af02a8537941b8d4ec4623a00eb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1175,6 +1180,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 115233810746420429, guid: ec520af02a8537941b8d4ec4623a00eb,
+        type: 3}
+      propertyPath: enemyAnimation
+      value: 
+      objectReference: {fileID: 1962416190}
     - target: {fileID: 3604979257811617485, guid: ec520af02a8537941b8d4ec4623a00eb,
         type: 3}
       propertyPath: health_UI
