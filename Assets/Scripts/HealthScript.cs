@@ -134,7 +134,7 @@ public class HealthScript : MonoBehaviour
         crowdFin.SetActive(true);
         yield return new WaitForSeconds(9f);
         SceneManager.LoadScene(0);
-        Application.ExternalCall("NewLocation", "https://hub.dectim.ca/");
+        Application.ExternalCall("NewLocation", "http://aauclair.dectim.ca/merci/merci.PNG");
     }
 
     IEnumerator AllowRotate()
