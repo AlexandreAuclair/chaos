@@ -137,6 +137,11 @@ public class HealthScript : MonoBehaviour
         Application.ExternalCall("NewLocation", "http://aauclair.dectim.ca/merci/merci.PNG");
     }
 
+    public void Terminate()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     IEnumerator AllowRotate()
     {
         playerDied = true;
