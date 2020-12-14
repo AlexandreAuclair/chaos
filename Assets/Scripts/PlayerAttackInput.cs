@@ -6,7 +6,8 @@ public class PlayerAttackInput : MonoBehaviour
 {
     private CharacterAnimations playerAnimation;
     public GameObject enemyAnimation;
-    public GameObject attackPoint;
+    public GameObject attackPoint1;
+    public GameObject attackPoint2;
     private PlayerShield shield;
     private HealthScript healthScript;
     private CharacterSoundFX soundFX;
@@ -124,16 +125,29 @@ public class PlayerAttackInput : MonoBehaviour
         playerAnimation.Transition();
     }
 
-    void Activate_AttackPoint()
+    void Activate_AttackPoint1()
     {
-        attackPoint.SetActive(true);
+        attackPoint1.SetActive(true);
     }
 
-    void Deactivate_AttackPoint()
+    void Deactivate_AttackPoint1()
     {
-        if (attackPoint.activeInHierarchy)
+        if (attackPoint1.activeInHierarchy)
         {
-            attackPoint.SetActive(false);
+            attackPoint1.SetActive(false);
+        }
+    }
+    
+    void Activate_AttackPoint2()
+    {
+        attackPoint2.SetActive(true);
+    }
+
+    void Deactivate_AttackPoint2()
+    {
+        if (attackPoint2.activeInHierarchy)
+        {
+            attackPoint2.SetActive(false);
         }
     }
 
