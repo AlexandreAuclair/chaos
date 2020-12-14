@@ -112,27 +112,23 @@ public class PlayerMove : MonoBehaviour
     {
         Vector3 rotation_Direction = Vector3.zero;
         rotation_Direction = transform.TransformDirection(Vector3.left);
-        playerAnimations.TurnBatard();
         if (rotation_Direction != Vector3.zero)
         {
             transform.rotation = Quaternion.RotateTowards(
                 transform.rotation, Quaternion.LookRotation(rotation_Direction),
                 rotateDegreesPerSecond * Time.deltaTime);
         }
-        playerAnimations.TurnLeft(true);
     }
     void TournerDroite()
     {
         Vector3 rotation_Direction = Vector3.zero;
         rotation_Direction = transform.TransformDirection(Vector3.right);
-        playerAnimations.WalkDont();
         if (rotation_Direction != Vector3.zero)
         {
             transform.rotation = Quaternion.RotateTowards(
                 transform.rotation, Quaternion.LookRotation(rotation_Direction),
                 rotateDegreesPerSecond * Time.deltaTime);
         }
-        playerAnimations.TurnRight(true);
     }
 
     void AnimateWalk()
