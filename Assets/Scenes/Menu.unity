@@ -1030,7 +1030,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: deux joueurs
+  m_Text: Jouer
 --- !u!222 &1892371095
 CanvasRenderer:
   m_ObjectHideFlags: 0

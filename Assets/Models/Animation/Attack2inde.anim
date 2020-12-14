@@ -13120,14 +13120,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.5
-    functionName: Activate_AttackPoint
+    functionName: Activate_AttackPoint1
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.6666667
-    functionName: Deactivate_AttackPoint
+    functionName: Deactivate_AttackPoint1
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
