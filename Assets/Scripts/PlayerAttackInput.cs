@@ -6,16 +6,13 @@ public class PlayerAttackInput : MonoBehaviour
 {
     private CharacterAnimations playerAnimation;
     public GameObject enemyAnimation;
-    
-    
     public GameObject attackPoint;
-
     private PlayerShield shield;
-
     private HealthScript healthScript;
-
     private CharacterSoundFX soundFX;
-private bool a = false;
+    private bool canAttack = true;
+    private bool a = false;
+
     void Awake()
     {
         playerAnimation = GetComponent<CharacterAnimations>();
@@ -29,6 +26,13 @@ private bool a = false;
     // Update is called once per frame
     void Update()
     {
+        if (playerAnimation.anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+        {
+            canAttack = true;
+        } else if (!playerAnimation.anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+        {
+            canAttack = false;
+        }
 
         //defend when J pressed
         if (Input.GetKeyDown(KeyCode.Z))
@@ -43,28 +47,23 @@ private bool a = false;
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            //if(Random.Range(0, 2) > 0)
-            //{
-            // playerAnimation.Attack_1();
-            //soundFX.Attack_1();
-            //}
-            //else
-            //{
-            //playerAnimation.Attack_2();
-            //soundFX.Attack_2();
-            //}
-            if (a == true)
+            if (canAttack == true)
             {
-                Transition();
-                a = false;
+                if (a == true)
+                {
+                    Transition();
+                    a = false;
+                }
+                AttackLight();
             }
-            AttackLight();
-            
         }
         
         if (Input.GetKeyDown(KeyCode.X))
         {
-            AttackHeavy();
+            if (canAttack == true)
+            {
+                AttackHeavy();
+            }
         }
     }
 
@@ -97,11 +96,7 @@ private bool a = false;
     {
         if(healthScript.shieldActivated == false)
         {
-            if (playerAnimation.anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
-            {
-                soundFX.Attack();
-            }
-
+            soundFX.Attack();
             playerAnimation.Attack_1(); 
             a = true;
         }     
@@ -110,8 +105,8 @@ private bool a = false;
     {
         if (healthScript.shieldActivated == false)
         {
-            playerAnimation.Attack_3();
             soundFX.Attack();
+            playerAnimation.Attack_3();
         }   
     }
 
@@ -119,14 +114,14 @@ private bool a = false;
     {
         if (healthScript.shieldActivated == false)
         {
+            soundFX.Attack();
             playerAnimation.Attack_4();
-              soundFX.Attack();
         }   
     }
+
     void Transition()
     {
         playerAnimation.Transition();
-        soundFX.Attack();
     }
 
     void Activate_AttackPoint()
